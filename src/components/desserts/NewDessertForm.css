@@ -22,6 +22,12 @@ input {
   width: 100%;
 }
 
+.classlessButton {
+  background-color: transparent;
+  border: transparent;
+  color: white;
+}
+
 .formButton {
   display: block;
   margin: 20px auto;

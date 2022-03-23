@@ -1,8 +1,31 @@
+import { useRef } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import classes from "./NewDessertForm.css";
+import { propTypes } from "react-bootstrap/esm/Image";
 
-function NewDessertForm() {
+function NewDessertForm(props) {
+  const nameInputRef = useRef();
+  const imageInputRef = useRef();
+  const recipeInputRef = useRef();
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const enteredName = nameInputRef.current.value;
+    const enteredImage = imageInputRef.current.value;
+    const enteredRecipe = recipeInputRef.current.value;
+
+    const newDessertData = {
+      name: enteredName,
+      image: enteredImage,
+      recipe: enteredRecipe,
+    };
+
+    console.log(newDessertData);
+
+    props.onAddNewDessert(newDessertData);
+  }
+
   return (
     <div className="NewDessertForm">
       <Card>
@@ -13,20 +36,22 @@ function NewDessertForm() {
         />
         <Card.Body>
           <Card.Text>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form">
                 <label htmlFor="Name">Name</label>
-                <input />
+                <input type="text" required id="name" ref={nameInputRef} />
               </div>
               <div className="form">
                 <label htmlFor="Image">Image</label>
-                <input />
+                <input type="url" required id="image" ref={imageInputRef} />
               </div>
               <div className="form">
                 <label htmlFor="Label">Recipe</label>
-                <input />
+                <input type="url" required id="recipe" ref={recipeInputRef} />
               </div>
-              <Button className="formButton">Submit the Recipe</Button>
+              <Button className="formButton">
+                <button className="classlessButton">Submit the Recipe</button>
+              </Button>
             </form>
           </Card.Text>
         </Card.Body>

@@ -12,21 +12,6 @@ function DessertsList() {
           <Col className="cardList" md={4}>
             <DessertElement />
           </Col>
-          <Col className="cardList" md={4}>
-            <DessertElement />
-          </Col>
-          <Col className="cardList" md={4}>
-            <DessertElement />
-          </Col>
-          <Col className="cardList" md={4}>
-            <DessertElement />
-          </Col>
-          <Col className="cardList" md={4}>
-            <DessertElement />
-          </Col>
-          <Col className="cardList" md={4}>
-            <DessertElement />
-          </Col>
         </Row>
       </Container>
     </div>
