@@ -1,4 +1,4 @@
-import classes from "./DessertElement.module.css";
+import classes from "./DessertElement.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
@@ -13,12 +13,12 @@ function DessertElement() {
   ];
   return (
     <div className="DessertElement">
-      <Card style={{ width: "18rem" }}>
+      <Card className="card" style={{ width: "18rem" }}>
         <Card.Img variant="top" src={dummyData[0].picture} />
         <Card.Body>
           <Card.Title>{dummyData[0].name}</Card.Title>
           <a href={dummyData[0].recipe} target="_blank">
-            <Button>Go to recipe</Button>
+            <Button className="button">Go to recipe</Button>
           </a>
         </Card.Body>
       </Card>
