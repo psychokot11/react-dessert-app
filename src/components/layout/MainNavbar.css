@@ -7,3 +7,8 @@
   font-size: 22px;
   color: #62a5bd;
 }
+
+.TopNav {
+  position: relative;
+  top: 0px;
+}

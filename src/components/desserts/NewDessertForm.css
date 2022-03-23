@@ -1,0 +1,36 @@
+.NewDessertForm {
+  max-width: 60%;
+  margin: 40px auto;
+}
+
+.formImg {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+div.form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+}
+
+input {
+  display: block;
+  width: 100%;
+}
+
+.formButton {
+  display: block;
+  margin: 20px auto;
+  background-color: #f1cac1;
+  border-color: #f3e1dd;
+  color: white;
+}
+
+.formButton:hover {
+  background-color: #62a5bd;
+  border-color: #62a5bd;
+}

@@ -41,7 +41,7 @@ const TopNav = (props) => {
             Desserts
           </Link>
           <Link to="/new-dessert" className="nav-link text-info">
-            New Dessert
+            Add Dessert
           </Link>
         </div>
       </nav>
