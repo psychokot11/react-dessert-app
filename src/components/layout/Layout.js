@@ -1,8 +1,13 @@
 import classes from "./Layout.module.css";
-import MainNavbar from "./MainNavbar";
+import TopNav from "./MainNavbar";
 
-function Layout() {
-  return <div className="Layout"></div>;
+function Layout(props) {
+  return (
+    <div className="Layout">
+      <TopNav />
+      <main>{props.children}</main>
+    </div>
+  );
 }
 
 export default Layout;

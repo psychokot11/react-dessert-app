@@ -1,7 +1,13 @@
-import classes from "./DessertsList.modules.css";
+import DessertElement from "./DessertElement";
+import classes from "./DessertsList.module.css";
 
 function DessertsList() {
-  return <div className="DessertsList">desserts list</div>;
+  return (
+    <div className="DessertsList">
+      list
+      <DessertElement />
+    </div>
+  );
 }
 
 export default DessertsList;

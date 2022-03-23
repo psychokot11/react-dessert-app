@@ -7,13 +7,15 @@ import Layout from "./components/layout/Layout";
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<MainDessertsPage />} />
-          <Route path="new-dessert" element={<NewDessertPage />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </Router>
+      <Layout>
+        <Router>
+          <Routes>
+            <Route path="/" element={<MainDessertsPage />} />
+            <Route path="new-dessert" element={<NewDessertPage />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </Router>
+      </Layout>
     </div>
   );
 }
