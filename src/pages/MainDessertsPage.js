@@ -38,12 +38,13 @@ function MainDessertsPage() {
         ></img>
       </section>
     );
+  } else {
+    return (
+      <div className="MainDessertsPage">
+        <DessertsList desserts={loadedDesserts} />
+      </div>
+    );
   }
-  return (
-    <div className="MainDessertsPage">
-      <DessertsList desserts={loadedDesserts} />
-    </div>
-  );
 }
 
 export default MainDessertsPage;

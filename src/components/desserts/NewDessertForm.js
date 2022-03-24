@@ -20,7 +20,7 @@ function NewDessertForm(props) {
       recipe: enteredRecipe,
     };
 
-    console.log(newDessertData);
+    // console.log(newDessertData);
 
     props.onAddNewDessert(newDessertData);
   }

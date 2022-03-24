@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function NewDessertPage() {
   const navigate = useNavigate();
 
-  function handleNewMeetup(newDessertData) {
+  function handleNewDessert(newDessertData) {
     fetch("https://desserts-api-default-rtdb.firebaseio.com/desserts.json", {
       method: "POST",
       body: JSON.stringify(newDessertData),
@@ -18,7 +18,7 @@ function NewDessertPage() {
 
   return (
     <div className="NewDessertPage">
-      <NewDessertForm onAddNewDessert={handleNewMeetup} />
+      <NewDessertForm onAddNewDessert={handleNewDessert} />
     </div>
   );
 }
