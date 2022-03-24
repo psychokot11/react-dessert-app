@@ -2,22 +2,14 @@ import classes from "./DessertElement.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-function DessertElement() {
-  const dummyData = [
-    {
-      name: "no bake cheesecake",
-      picture:
-        "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2019/03/no-bake-cheesecake-4.jpg",
-      recipe: "https://sallysbakingaddiction.com/no-bake-cheesecake/",
-    },
-  ];
+function DessertElement(props) {
   return (
     <div className="DessertElement">
       <Card className="card" style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={dummyData[0].picture} />
+        <Card.Img variant="top" src={props.picture} />
         <Card.Body>
-          <Card.Title>{dummyData[0].name}</Card.Title>
-          <a href={dummyData[0].recipe} target="_blank">
+          <Card.Title>{props.name}</Card.Title>
+          <a href={props.recipe} target="_blank">
             <Button className="button">Go to recipe</Button>
           </a>
         </Card.Body>

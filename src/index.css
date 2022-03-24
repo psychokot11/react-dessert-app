@@ -1,0 +1,12 @@
+.loading {
+  margin-top: 30px;
+  font-size: 22px;
+  display: block;
+  text-align: center;
+}
+
+.loadingImg {
+  display: block;
+  margin: 0 auto;
+  max-width: 5%;
+}

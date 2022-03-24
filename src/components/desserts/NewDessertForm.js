@@ -2,7 +2,6 @@ import { useRef } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import classes from "./NewDessertForm.css";
-import { propTypes } from "react-bootstrap/esm/Image";
 
 function NewDessertForm(props) {
   const nameInputRef = useRef();
