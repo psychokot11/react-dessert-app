@@ -1,4 +1,4 @@
-import classes from "./Layout.css";
+import "./Layout.css";
 import TopNav from "./MainNavbar";
 
 function Layout(props) {

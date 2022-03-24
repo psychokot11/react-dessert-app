@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import classes from "./NewDessertForm.css";
+import "./NewDessertForm.css";
 
 function NewDessertForm(props) {
   const nameInputRef = useRef();

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import classes from "./MainNavbar.css";
+import "./MainNavbar.css";
 
 const TopNav = (props) => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);

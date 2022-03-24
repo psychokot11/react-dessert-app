@@ -34,6 +34,7 @@ function MainDessertsPage() {
         <img
           className="loadingImg"
           src="https://www.grandbazaarist.com/wp-content/uploads/2019/12/Turkish-Delight-Rose-Flavoured-buy.jpg"
+          alt="loading"
         ></img>
       </section>
     );
