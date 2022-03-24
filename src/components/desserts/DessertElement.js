@@ -6,7 +6,7 @@ function DessertElement(props) {
   return (
     <div className="DessertElement">
       <Card className="card" style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={props.picture} />
+        <Card.Img variant="top" src={props.image} />
         <Card.Body>
           <Card.Title>{props.name}</Card.Title>
           <a href={props.recipe} target="_blank">

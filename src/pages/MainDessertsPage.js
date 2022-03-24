@@ -2,23 +2,8 @@ import DessertsList from "../components/desserts/DessertsList";
 import { useState, useEffect } from "react";
 
 function MainDessertsPage() {
-  const dummyData = [
-    {
-      name: "no bake cheesecake",
-      picture:
-        "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2019/03/no-bake-cheesecake-4.jpg",
-      recipe: "https://sallysbakingaddiction.com/no-bake-cheesecake/",
-    },
-    {
-      name: "no bake cheesecake",
-      picture:
-        "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2019/03/no-bake-cheesecake-4.jpg",
-      recipe: "https://sallysbakingaddiction.com/no-bake-cheesecake/",
-    },
-  ];
-
   const [isLoading, setIsLoading] = useState(true);
-  const [loadedDessert, setLoadedDesserts] = useState([]);
+  const [loadedDesserts, setLoadedDesserts] = useState([]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -55,7 +40,7 @@ function MainDessertsPage() {
   }
   return (
     <div className="MainDessertsPage">
-      <DessertsList desserts={dummyData} />
+      <DessertsList desserts={loadedDesserts} />
     </div>
   );
 }
