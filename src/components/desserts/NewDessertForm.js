@@ -10,7 +10,7 @@ function NewDessertForm(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const enteredName = nameInputRef.current.value;
+    const enteredName = nameInputRef.current.value.toLowerCase();
     const enteredImage = imageInputRef.current.value;
     const enteredRecipe = recipeInputRef.current.value;
 
