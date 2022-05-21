@@ -13,15 +13,6 @@ function DessertsList(props) {
           />
         </div>
       ))}
-      {props.desserts.map((desert, index) => (
-        <div key={index} className="cardList" md={4}>
-          <DessertElement
-            name={desert.name}
-            image={desert.image}
-            recipe={desert.recipe}
-          />
-        </div>
-      ))}
     </div>
   );
 }
