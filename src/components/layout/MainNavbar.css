@@ -12,3 +12,7 @@
   position: relative;
   top: 0px;
 }
+
+.navbar-toggler {
+  margin-right: 8px;
+}

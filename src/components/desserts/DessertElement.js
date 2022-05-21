@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 function DessertElement(props) {
   return (
     <div className="DessertElement">
-      <Card className="card" style={{ width: "18rem" }}>
+      <Card className="card" style={{ width: "22rem" }}>
         <Card.Img variant="top" src={props.image} />
         <Card.Body>
           <Card.Title>{props.name}</Card.Title>
