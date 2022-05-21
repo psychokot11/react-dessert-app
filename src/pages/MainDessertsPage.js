@@ -11,12 +11,8 @@ function MainDessertsPage() {
     axios
       .get("https://infinite-waters-04259.herokuapp.com/desserts")
       .then((response) => {
-        console.log(response.data);
-        // const desserts = [response.data];
         setIsLoading(false);
         setLoadedDesserts(response.data);
-        //console.log(desserts);
-        console.log(loadedDesserts);
       });
 
     // setIsLoading(true);
