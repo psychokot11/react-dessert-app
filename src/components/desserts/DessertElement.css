@@ -12,3 +12,7 @@
 .card {
   box-shadow: -3px 8px 25px 4px rgba(0, 0, 0, 0.1);
 }
+
+.card__img {
+  max-height: 525px;
+}
