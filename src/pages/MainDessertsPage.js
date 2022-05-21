@@ -1,5 +1,6 @@
 import DessertsList from "../components/desserts/DessertsList";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 function MainDessertsPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -7,24 +8,35 @@ function MainDessertsPage() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://desserts-api-default-rtdb.firebaseio.com/desserts.json")
+    axios
+      .get("https://infinite-waters-04259.herokuapp.com/desserts")
       .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        const desserts = [];
-
-        for (const key in data) {
-          const dessert = {
-            id: key,
-            ...data[key],
-          };
-
-          desserts.push(dessert);
-        }
+        console.log(response.data);
+        // const desserts = [response.data];
         setIsLoading(false);
-        setLoadedDesserts(desserts);
+        setLoadedDesserts(response.data);
+        //console.log(desserts);
+        console.log(loadedDesserts);
       });
+
+    // setIsLoading(true);
+    // fetch("https://www.recipetineats.com/easy-tiramisu/")
+    //   .then((response) => {
+    //     return response.json();
+    //   })
+    //   .then((data) => {
+    //     const desserts = [];
+    //     console.log(data);
+    //     for (const key in data) {
+    //       const dessert = {
+    //         id: key,
+    //         ...data[key],
+    //       };
+    //       desserts.push(dessert);
+    //     }
+    //     setIsLoading(false);
+    //     setLoadedDesserts(desserts);
+    // });
   }, []);
 
   if (isLoading) {

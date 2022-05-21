@@ -9,11 +9,10 @@ function DessertsList(props) {
     <div className="DessertsList">
       <Container fluid>
         <Row className="row">
-          {props.desserts.map((desert) => (
-            <Col key={desert.id} className="cardList" md={4}>
+          {props.desserts.map((desert, index) => (
+            <Col key={index} className="cardList" md={4}>
               <div>
                 <DessertElement
-                  id={desert.id}
                   name={desert.name}
                   image={desert.image}
                   recipe={desert.recipe}
