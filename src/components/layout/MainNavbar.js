@@ -37,10 +37,13 @@ const TopNav = (props) => {
           className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
           id="navbarsExample09"
         >
-          <Link to="/" className="nav-link text-info">
+          <Link to="/" className="nav-link text-info navbar__link-desserts">
             Desserts
           </Link>
-          <Link to="/new-dessert" className="nav-link text-info">
+          <Link
+            to="/new-dessert"
+            className="nav-link text-info navbar__link-addDesserts"
+          >
             Add Dessert
           </Link>
         </div>

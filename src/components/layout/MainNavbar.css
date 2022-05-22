@@ -16,3 +16,9 @@
 .navbar-toggler {
   margin-right: 8px;
 }
+
+.navbar__link-desserts,
+.navbar__link-addDesserts {
+  font-weight: 300;
+  font-size: 32px;
+}
