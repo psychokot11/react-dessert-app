@@ -18,7 +18,8 @@
 }
 
 .navbar__link-desserts,
-.navbar__link-addDesserts {
+.navbar__link-addDesserts,
+.navbar__link-favorites {
   font-weight: 300;
   font-size: 32px;
 }

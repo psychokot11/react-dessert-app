@@ -46,6 +46,12 @@ const TopNav = (props) => {
           >
             Add Dessert
           </Link>
+          <Link
+            to="/favorites"
+            className="nav-link text-info navbar__link-favorites"
+          >
+            Favorites
+          </Link>
         </div>
       </nav>
     </div>

@@ -3,6 +3,7 @@ import MainDessertsPage from "./pages/MainDessertsPage";
 import NewDessertPage from "./pages/NewDessertPage";
 import ErrorPage from "./pages/ErrorPage";
 import Layout from "./components/layout/Layout";
+import Favorites from "./pages/Favorites";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainDessertsPage />} />
             <Route path="new-dessert" element={<NewDessertPage />} />
+            <Route path="favorites" element={<Favorites />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Layout>
