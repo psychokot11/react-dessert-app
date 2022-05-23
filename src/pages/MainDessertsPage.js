@@ -41,7 +41,7 @@ function MainDessertsPage() {
         <div className="loading">Loading...</div>
         <img
           className="loadingImg"
-          src="https://www.grandbazaarist.com/wp-content/uploads/2019/12/Turkish-Delight-Rose-Flavoured-buy.jpg"
+          src="https://c.tenor.com/0V0nvU2bzY4AAAAd/alf-birthday-cake.gif"
           alt="loading"
         ></img>
       </section>
