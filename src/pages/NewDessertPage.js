@@ -5,7 +5,7 @@ function NewDessertPage() {
   const navigate = useNavigate();
 
   function handleNewDessert(newDessertData) {
-    fetch("https://infinite-waters-04259.herokuapp.com/desserts", {
+    fetch("https://desserts-api-db.herokuapp.com/desserts", {
       method: "POST",
       body: JSON.stringify(newDessertData),
       headers: {

@@ -9,7 +9,7 @@ function MainDessertsPage() {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("https://infinite-waters-04259.herokuapp.com/desserts")
+      .get("https://desserts-api-db.herokuapp.com/desserts")
       .then((response) => {
         setIsLoading(false);
         setLoadedDesserts(response.data);
