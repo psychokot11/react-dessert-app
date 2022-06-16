@@ -9,7 +9,7 @@ function MainDessertsPage() {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("https://desserts-api-db.herokuapp.com/desserts")
+      .get("https://desserts-32c1a-default-rtdb.firebaseio.com/")
       .then((response) => {
         setIsLoading(false);
         setLoadedDesserts(response.data);

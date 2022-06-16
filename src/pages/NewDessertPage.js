@@ -5,7 +5,7 @@ function NewDessertPage() {
   const navigate = useNavigate();
 
   function handleNewDessert(newDessertData) {
-    fetch("https://desserts-api-db.herokuapp.com/desserts", {
+    fetch("https://desserts-32c1a-default-rtdb.firebaseio.com/", {
       method: "POST",
       body: JSON.stringify(newDessertData),
       headers: {
