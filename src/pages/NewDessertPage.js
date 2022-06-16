@@ -5,11 +5,12 @@ function NewDessertPage() {
   const navigate = useNavigate();
 
   function handleNewDessert(newDessertData) {
-    fetch("https://desserts-32c1a-default-rtdb.firebaseio.com/", {
+    fetch("https://desserts-32c1a-default-rtdb.firebaseio.com/desserts.json", {
       method: "POST",
       body: JSON.stringify(newDessertData),
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
     }).then(() => {
       navigate("/");
