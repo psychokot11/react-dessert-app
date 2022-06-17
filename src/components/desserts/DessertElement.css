@@ -16,3 +16,27 @@
 .card__img {
   max-height: 525px;
 }
+
+.not-starred {
+  font-size: 28px;
+  position: relative;
+  top: 12px;
+  left: 10px;
+  color: #d7d0cf;
+  text-align: end;
+  padding: 5px;
+}
+
+.starred {
+  font-size: 28px;
+  position: relative;
+  top: 12px;
+  left: 10px;
+  color: red;
+  text-align: end;
+  padding: 5px;
+}
+
+.star-icon:hover {
+  color: #ffdede;
+}
