@@ -10,3 +10,11 @@
   margin: 0 auto;
   max-width: 30%;
 }
+
+.starred-text {
+  font-size: 22px;
+  color: #f19abe;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
