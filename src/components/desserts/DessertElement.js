@@ -1,21 +1,36 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./DessertElement.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import StarredContext from "../../context/starred-context";
 
 function DessertElement(props) {
-  const [isStarClicked, setIsStarClicked] = useState(false);
+  const starredCtx = useContext(StarredContext);
+  const itemIsStarred = starredCtx.itemIsStarred(props.name);
+
   const [starredClass, setStarredClass] = useState("not-starred");
-  const handleFavourites = () => {
-    if (!isStarClicked) {
-      setIsStarClicked(true);
-      setStarredClass("starred");
-    } else {
-      setIsStarClicked(false);
+
+  const toggleStarredItemsHandler = () => {
+    if (itemIsStarred) {
+      starredCtx.removeStarred(props.name);
       setStarredClass("not-starred");
+    } else {
+      starredCtx.addStarred({
+        name: props.name,
+        image: props.image,
+        recipe: props.recipe,
+      });
+      setStarredClass("starred");
     }
+    // if (!isStarClicked) {
+    //   setIsStarClicked(true);
+    //   setStarredClass("starred");
+    // } else {
+    //   setIsStarClicked(false);
+    //   setStarredClass("not-starred");
+    // }
   };
 
   return (
@@ -30,7 +45,7 @@ function DessertElement(props) {
           <FontAwesomeIcon
             icon={faStar}
             className={starredClass}
-            onClick={handleFavourites}
+            onClick={toggleStarredItemsHandler}
           />
         </Card.Body>
       </Card>
