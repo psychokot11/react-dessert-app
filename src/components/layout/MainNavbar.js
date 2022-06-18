@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "./MainNavbar.css";
 
 const TopNav = (props) => {
@@ -47,10 +49,10 @@ const TopNav = (props) => {
             Add Dessert
           </Link>
           <Link
-            to="/favorites"
+            to="/starred"
             className="nav-link text-info navbar__link-favorites"
           >
-            Favorites
+            <FontAwesomeIcon icon={faStar} className="starred-icon" />
           </Link>
         </div>
       </nav>
