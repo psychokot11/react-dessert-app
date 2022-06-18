@@ -48,8 +48,8 @@ function NewDessertForm(props) {
                 <label htmlFor="Label">Recipe</label>
                 <input type="url" required id="recipe" ref={recipeInputRef} />
               </div>
-              <Button className="formButton">
-                <button className="classlessButton">Submit the Recipe</button>
+              <Button className="formButton classlessButton">
+                Submit the Recipe
               </Button>
             </form>
           </Card.Text>

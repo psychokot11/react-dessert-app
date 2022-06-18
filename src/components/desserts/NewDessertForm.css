@@ -23,17 +23,14 @@ input {
 }
 
 .classlessButton {
-  background-color: transparent;
-  border: transparent;
+  background-color: #62a5bd;
+  border-color: #62a5bd;
   color: white;
 }
 
 .formButton {
   display: block;
   margin: 20px auto;
-  background-color: #f1cac1;
-  border-color: #f3e1dd;
-  color: white;
 }
 
 .formButton:hover {
