@@ -19,12 +19,12 @@ export function StarredContextProvider(props) {
 
   function removeStarredHandler(dessertId) {
     setUserStarred((prevStarred) => {
-      return prevStarred.filter((dessert) => dessert.id !== dessertId);
+      return prevStarred.filter((dessert) => dessert.name !== dessertId);
     });
   }
 
   function itemIsStarredHandler(dessertId) {
-    return userStarred.some((dessert) => dessert.id === dessertId);
+    return userStarred.some((dessert) => dessert.name === dessertId);
   }
 
   const context = {

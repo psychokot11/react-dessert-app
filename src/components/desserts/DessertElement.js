@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import "./DessertElement.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -10,27 +10,16 @@ function DessertElement(props) {
   const starredCtx = useContext(StarredContext);
   const itemIsStarred = starredCtx.itemIsStarred(props.name);
 
-  const [starredClass, setStarredClass] = useState("not-starred");
-
   const toggleStarredItemsHandler = () => {
     if (itemIsStarred) {
       starredCtx.removeStarred(props.name);
-      setStarredClass("not-starred");
     } else {
       starredCtx.addStarred({
         name: props.name,
         image: props.image,
         recipe: props.recipe,
       });
-      setStarredClass("starred");
     }
-    // if (!isStarClicked) {
-    //   setIsStarClicked(true);
-    //   setStarredClass("starred");
-    // } else {
-    //   setIsStarClicked(false);
-    //   setStarredClass("not-starred");
-    // }
   };
 
   return (
@@ -44,9 +33,10 @@ function DessertElement(props) {
           </a>
           <FontAwesomeIcon
             icon={faStar}
-            className={starredClass}
+            className={itemIsStarred ? `starred` : `not-starred`}
             onClick={toggleStarredItemsHandler}
           />
+          <div></div>
         </Card.Body>
       </Card>
     </div>
